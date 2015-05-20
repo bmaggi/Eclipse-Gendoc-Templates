@@ -16,3 +16,6 @@ To build locally, simply execute the command line:
 ```
 mvn clean install
 ```
+
+## Travis CI 
+[![Build Status](https://travis-ci.org/bmaggi/Gendoc2.svg?branch=master)](https://travis-ci.org/bmaggi/Gendoc2)
