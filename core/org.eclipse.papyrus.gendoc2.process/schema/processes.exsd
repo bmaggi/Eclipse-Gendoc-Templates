@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.papyrus.gendoc2.process" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.papyrus.gendoc2.process" id="org.eclipse.papyrus.gendoc2.processes" name="Gendoc2 Processes"/>
+      </appinfo>
+      <documentation>
+         The tags extension point allows third-party plug-ins to define new processes to be run by Gendoc2.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="process" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  a fully qualified identifier of the target extension point.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  an optional identifier of the extension instance.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  an optional name of the extension instance.
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="process">
+      <complexType>
+         <sequence>
+            <element ref="predecessor" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="successor" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  a unique id that will be used to identify this process.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string" use="required">
+            <annotation>
+               <documentation>
+                  the label that should be displayed on a progress monitor whil this process is running.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="processor" type="string">
+            <annotation>
+               <documentation>
+                  the fully qualified name of a class that implements &lt;samp&gt;org.eclipse.papyrus.gendoc2.process.IProcess&lt;/samp&gt;.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="parallel" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  indicates if this process can be run in parallel with other processes.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="priority" use="required">
+            <annotation>
+               <documentation>
+                  indicates the priority of this process. Processes with a higher priority will run earlier.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="NORMAL">
+                  </enumeration>
+                  <enumeration value="HIGH">
+                  </enumeration>
+                  <enumeration value="ABOVE_NORMAL">
+                  </enumeration>
+                  <enumeration value="BELOW_NORMAL">
+                  </enumeration>
+                  <enumeration value="LOW">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="predecessor">
+      <complexType>
+         <attribute name="ref" type="string">
+            <annotation>
+               <documentation>
+                  the id of a process that must run before this process.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.eclipse.papyrus.gendoc2.processes/process/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="successor">
+      <complexType>
+         <attribute name="ref" type="string">
+            <annotation>
+               <documentation>
+                  the id of a process that must after before this process.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.eclipse.papyrus.gendoc2.processes/process/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         1.1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         The following is an example of the tags extension point usage:
+&lt;p&gt;
+&lt;pre&gt;
+   &lt;extension
+         point=&quot;org.eclipse.papyrus.gendoc2.processes&quot;&gt;
+      &lt;process
+            id=&quot;example&quot;
+            label=&quot;Running example process&quot;
+            parallel=&quot;false&quot;
+            priority=&quot;NORMAL&quot;
+            processor=&quot;com.example.gendoc2.ExampleProcess&quot;&gt;
+         &lt;predecessor
+               ref=&quot;generate&quot;&gt;
+         &lt;/predecessor&gt;
+         &lt;successor
+               ref=&quot;save&quot;&gt;
+         &lt;/successor&gt;
+      &lt;/process&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;
+This defines an &lt;samp&gt;example&lt;/samp&gt; process that will run after the &lt;samp&gt;generate&lt;/samp&gt; process and before the &lt;samp&gt;save&lt;/samp&gt; process. The &lt;samp&gt;run()&lt;/samp&gt; method of the processor class will be called by Gendoc2.
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         Plug-ins that want to extend this extension point must provide a processor that implements the the &lt;samp&gt;org.eclipse.papyrus.gendoc2.process.IProcess&lt;/samp&gt; interface. A common practice is to extend &lt;samp&gt;org.eclipse.papyrus.gendoc2.process.AbstractProcess&lt;/samp&gt; or one of it&apos;s subclasses in order to inherit their functionality.
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         Gendoc2 provides a number of processes including &lt;samp&gt;generate&lt;/samp&gt;, &lt;samp&gt;drop&lt;/samp&gt;, and &lt;samp&gt;save&lt;/samp&gt;.
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         Copyright (c) 2010 Atos Origin.&lt;br&gt;
+All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at &lt;a href=&quot;http://www.eclipse.org/legal/epl-v10.html&quot;&gt;http://www.eclipse.org/legal/epl-v10.html&lt;/a&gt;
+      </documentation>
+   </annotation>
+
+</schema>

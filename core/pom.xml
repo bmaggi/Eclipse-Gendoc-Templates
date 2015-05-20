@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.eclipse.papyrus.gendoc2</groupId>
+	<artifactId>org.eclipse.papyrus.gendoc2.core.top</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<parent>
+		<artifactId>org.eclipse.papyrus.gendoc2.top</artifactId>
+		<groupId>org.eclipse.papyrus.gendoc2</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<packaging>pom</packaging>
+	<modules>
+		<module>org.eclipse.papyrus.documentation</module>
+		<module>org.eclipse.papyrus.gendoc.feature</module>
+		<module>org.eclipse.papyrus.gendoc.template</module>
+		<module>org.eclipse.papyrus.gendoc2</module>
+		<module>org.eclipse.papyrus.gendoc2.bundle.acceleo.commons</module>
+		<module>org.eclipse.papyrus.gendoc2.bundle.acceleo.gmf</module>
+		<module>org.eclipse.papyrus.gendoc2.bundle.acceleo.papyrus</module>
+		<module>org.eclipse.papyrus.gendoc2.document.parser</module>
+		<module>org.eclipse.papyrus.gendoc2.documents</module>
+		<module>org.eclipse.papyrus.gendoc2.m2t</module>
+		<module>org.eclipse.papyrus.gendoc2.process</module>
+		<module>org.eclipse.papyrus.gendoc2.script.acceleo</module>
+		<module>org.eclipse.papyrus.gendoc2.services</module>
+		<module>org.eclipse.papyrus.gendoc2.services.docx</module>
+		<module>org.eclipse.papyrus.gendoc2.services.odt</module>
+		<module>org.eclipse.papyrus.gendoc2.tags</module>
+		<module>org.eclipse.papyrus.gendoc2.tags.handlers</module>
+		<module>org.eclipse.papyrus.gendoc2.tags.html</module>
+		<module>org.eclipse.papyrus.gendoc2.tags.parsers</module>
+		<module>org.eclipse.papyrus.gendoc2.ui</module>
+		<module>org.eclipse.papyrus.gendoc2.wizard</module>
+	</modules>
+</project>

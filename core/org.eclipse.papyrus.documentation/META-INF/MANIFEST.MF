@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,org.eclipse
+ .core.runtime;visibility:=reexport,org.eclipse.core.commands;visibili
+ ty:=reexport
+Export-Package: org.eclipse.papyrus.documentation,org.eclipse.papyrus.
+ documentation.eannotation
+Bundle-Vendor: %providerName
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.0.0.qualifier
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-Activator: org.eclipse.papyrus.documentation.Activator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.eclipse.papyrus.documentation;singleton:=true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+

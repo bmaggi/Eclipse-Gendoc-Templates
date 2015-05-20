@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:this="http:///org.eclipse.papyrus.gendoc2/ressources/script.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http:///org.eclipse.papyrus.gendoc2/ressources/script.xsd">
+    <xsd:element name="gendoc" type="xsd:string">
+    	<xsd:annotation>
+    		<xsd:documentation>The tag &lt;gendoc&gt; is used to isolate the variable parts (gendoc scripts). All the content between those tags is replaced by the generated documentation.</xsd:documentation></xsd:annotation></xsd:element>
+
+    <xsd:complexType name="script">
+        <xsd:annotation>
+        	<xsd:documentation></xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+    		<xsd:element name="image" type="this:image" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</xsd:element>
+    		<xsd:element name="table" type="this:table" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="table">
+    	<xsd:annotation>
+    		<xsd:documentation>The tag &lt;table&gt; is used to specify a generated table. This tag concatenate multiple table declarations that it is static or generated. 
+A table shall have at least one row child declared as a odt/docx table.</xsd:documentation>
+    	</xsd:annotation></xsd:complexType>
+
+    <xsd:complexType name="image">
+    	<xsd:attribute name="filePath" type="xsd:string"
+    		use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute specifies the location to the image
+    				with an absolute path
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+    	<xsd:attribute name="object" type="xsd:string" use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute specifies the image to insert
+    				(extracted from an external data source)
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+    	<xsd:attribute name="keepW" type="xsd:boolean" default="true"
+    		use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute specifies if the width defined is
+    				kept. If true the image is generated with defined
+    				width. If false, the width is derived proportionally
+    				from the defined height.
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+    	<xsd:attribute name="keepH" type="xsd:boolean" use="optional" default="true">
+    		<xsd:annotation>
+    			<xsd:documentation>This attribute specifies if the height defined is kept. If true the image is generated with the defined height. If false, the height is derived proportionally to the defined width. </xsd:documentation>
+    		</xsd:annotation></xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

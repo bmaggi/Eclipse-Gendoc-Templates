@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="org.eclipse.papyrus.gendoc" url="features/org.eclipse.papyrus.gendoc_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
+	<feature id="org.eclipse.papyrus.gendoc.source" url="features/org.eclipse.papyrus.gendoc.source_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
+	
+	
+	<category-def label="Gendoc2 by Papyrus" name="org.eclipse.papyrus.gendoc2.category">
+		<description>Gendoc2 by Papyrus</description>
+	</category-def>
+</site>

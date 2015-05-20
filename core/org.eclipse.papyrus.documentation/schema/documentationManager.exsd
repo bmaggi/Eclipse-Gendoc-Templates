@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.papyrus.documentation" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.papyrus.documentation" id="modelDocumentationManager" name="modelDocumentationManager"/>
+      </appinfo>
+      <documentation>
+         This extension is used to provide a way to get and set a documentation for an element of a specific meta-model.
+A generic implementation using EAnnotation on EModelElement is used if no other implementation is found for the current meta-model.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="documentationManager" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="documentationManager">
+      <complexType>
+         <attribute name="modelNsURI" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The nsURI of the meta-model for which this implementation applies.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="managerClass" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The implementation for the specified meta-model.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.papyrus.documentation.registry.IDocumentationManager"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="priority">
+            <annotation>
+               <documentation>
+                  This attribute is used to specify the priority of the contributed documentationManager.
+The documentationManager with the higher priority will be used. The behavior is unspecified if more than one documentationManager have the same modelNsURI and the same priority. Default value is Lowest.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="Lowest">
+                  </enumeration>
+                  <enumeration value="Low">
+                  </enumeration>
+                  <enumeration value="Medium">
+                  </enumeration>
+                  <enumeration value="High">
+                  </enumeration>
+                  <enumeration value="Highest">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+      </complexType>
+   </element>
+
+
+
+
+
+
+</schema>

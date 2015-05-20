@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.eclipse.papyrus.gendoc2.serviceTypes" name="%extension-point.name" schema="schema/serviceTypes.exsd"/>
+   <extension-point id="org.eclipse.papyrus.gendoc2.services" name="%extension-point.name.0" schema="schema/services.exsd"/>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.serviceTypes">
+      <serviceType
+            id="GendocDiagnostician"
+            interface="org.eclipse.papyrus.gendoc2.services.IGendocDiagnostician">
+      </serviceType>
+      <serviceType
+            id="Logger"
+            interface="org.eclipse.papyrus.gendoc2.services.ILogger">
+      </serviceType>
+      <serviceType
+            id="ProgressMonitorService"
+            interface="org.eclipse.papyrus.gendoc2.services.IProgressMonitorService">
+      </serviceType>
+      <serviceType
+            id="RegistryService"
+            interface="org.eclipse.papyrus.gendoc2.services.IRegistryService">
+      </serviceType>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.services">
+      <service
+            class="org.eclipse.papyrus.gendoc2.services.impl.GendocDiagnostician"
+            default="true"
+            id="GendocDiagnostician"
+            serviceType="GendocDiagnostician">
+      </service>
+      <service
+            class="org.eclipse.papyrus.gendoc2.services.impl.Logger"
+            default="true"
+            id="Logger"
+            serviceType="Logger">
+      </service>
+      <service
+            class="org.eclipse.papyrus.gendoc2.services.impl.ProgressMonitorService"
+            default="true"
+            id="ProgressMonitorService"
+            serviceType="ProgressMonitorService">
+      </service>
+      <service
+            class="org.eclipse.papyrus.gendoc2.services.impl.RegistryService"
+            default="true"
+            id="RegistryService"
+            serviceType="RegistryService">
+      </service>
+   </extension>
+
+</plugin>

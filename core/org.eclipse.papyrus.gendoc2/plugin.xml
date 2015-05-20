@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.processes">
+      <process
+            id="generate"
+            label="Parsing and executing scripts"
+            parallel="false"
+            priority="NORMAL"
+            processor="org.eclipse.papyrus.gendoc2.GendocManager">
+         <predecessor
+               ref="countSteps">
+         </predecessor>
+      </process>
+      <process
+            id="save"
+            label="Saving generated document"
+            parallel="false"
+            priority="NORMAL"
+            processor="org.eclipse.papyrus.gendoc2.SaveProcess">
+         <predecessor
+               ref="generate">
+         </predecessor>
+      </process>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.processes">
+      <process
+            id="additionalResources"
+            label="Adding additional resources"
+            parallel="false"
+            priority="NORMAL"
+            processor="org.eclipse.papyrus.gendoc2.AdditionalResourceProcess">
+         <predecessor
+               ref="generate">
+         </predecessor>
+         <successor
+               ref="save">
+         </successor>
+      </process>
+   </extension>
+
+</plugin>

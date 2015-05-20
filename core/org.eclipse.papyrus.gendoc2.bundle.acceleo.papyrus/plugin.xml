@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.processes">
+      <process
+            id="org.eclipse.papyrus.gendoc2.bundle.acceleo.papyrus.factoryassignment"
+            label="Check if using a Papyrus model"
+            parallel="false"
+            priority="NORMAL"
+            processor="org.eclipse.papyrus.gendoc2.bundle.acceleo.papyrus.process.PapyrusModelLoadingOverriding">
+         <successor
+               ref="countSteps">
+         </successor>
+      </process>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.script.acceleo.services">
+      <service
+            emtl="bin/org/eclipse/papyrus/gendoc2/bundle/acceleo/papyrus/mtl/papyrus.emtl"
+            importedByDefault="true"
+            name="papyrus">
+      </service>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.services">
+      <service
+            class="org.eclipse.papyrus.gendoc2.bundle.acceleo.papyrus.service.PapyrusModelLoaderService"
+            default="false"
+            id="PapyrusModelLoaderService"
+            serviceType="EMFModelLoaderService">
+      </service>
+   </extension>
+
+</plugin>

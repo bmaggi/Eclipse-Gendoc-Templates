@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.serviceTypes">
+      <serviceType
+            id="TagParserService"
+            interface="org.eclipse.papyrus.gendoc2.tags.parsers.ITagParserService">
+      </serviceType>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.services">
+      <service
+            class="org.eclipse.papyrus.gendoc2.tags.parsers.impl.TagParserService"
+            default="true"
+            id="TagParserService"
+            serviceType="TagParserService">
+      </service>
+   </extension>
+
+</plugin>

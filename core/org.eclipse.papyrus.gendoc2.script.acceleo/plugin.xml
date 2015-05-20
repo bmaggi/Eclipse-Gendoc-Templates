@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="services" name="%extension-point.name" schema="schema/services.exsd"/>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.scriptLanguages">
+      <scriptLanguage
+            name="acceleo"
+            processor="org.eclipse.papyrus.gendoc2.script.acceleo.AcceleoM2TProcess">
+      </scriptLanguage>
+   </extension>
+
+</plugin>

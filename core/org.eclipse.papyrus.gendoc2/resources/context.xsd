@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:this="http:///org.eclipse.papyrus.gendoc2/ressources/context.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http:///org.eclipse.papyrus.gendoc2/ressources/context.xsd">
+    <xsd:element name="context" type="this:context">
+    	<xsd:annotation>
+    		<xsd:documentation>The tag &lt;context&gt; is used to specified the context for the execution of the next script (see section Context management). All the content between those tags will not appear in the final document.</xsd:documentation></xsd:annotation></xsd:element>
+
+    <xsd:complexType name="context">
+    	<xsd:attribute name="model" type="xsd:string" use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute informs about the current model used
+    				for the next script generation. It can have an
+    				absolute value (model path or element qualified
+    				name) or it can be a parameter declared in the
+    				configuration section. The parameter shall be
+    				prefixed by a '$' and encircled by { }.
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+    	<xsd:attribute name="element" type="xsd:string"
+    		use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute informs about the current element
+    				from the current model (contextual model) used for
+    				the next script generation. This is equivalent in
+    				Java to “this”. It can have an absolute value (model
+    				path or element qualified name) or it can be a
+    				parameter declared in the configuration section. The
+    				parameter shall be prefixed by a '$' and encircled
+    				by { }.
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+        <xsd:attribute name="featureLabel" type="xsd:string" use="optional"></xsd:attribute>
+        <xsd:attribute name="importedBundles" type="xsd:string"
+    		use="optional">
+    		<xsd:annotation>
+    			<xsd:documentation>
+    				This attribute is used to import some specific
+    				bundles for the next script generations. All the
+    				available methods for scripts are not necessarily
+    				directly accessible. Specific methods to domains are
+    				grouped in bundles that can be imported using the
+    				attribute importedBundle of the tag context. If
+    				multiple bundles are imported, they shall be
+    				separated by a semicolon.
+    			</xsd:documentation>
+    		</xsd:annotation>
+    	</xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

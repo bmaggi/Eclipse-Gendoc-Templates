@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/configuration" xmlns:tns="http://www.example.org/configuration" elementFormDefault="qualified">
+
+    <element name="config" type="tns:config">
+    	<annotation>
+    		<documentation>The tag &lt;config&gt; is used to specify the configuration for the document generation (see section Configuration declaration). All the content between those tags will not appear in the final document. </documentation></annotation></element>
+
+
+    <complexType name="config">
+    	<sequence minOccurs="0" maxOccurs="1">
+    		<element name="output" type="tns:output" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="param" type="tns:param" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</element>
+    		<element name="importedDiagrams" type="tns:importedDiagrams" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="version" type="int" use="optional"
+    		default="2">
+            <annotation>
+            	<documentation>This attribute is used to specify the gendoc version. To run a gendoc V2 script this attribute value shall be '2'.</documentation>
+            </annotation>
+    	</attribute>
+    	<attribute name="runV1" type="boolean" use="optional"
+    		default="false">
+            <annotation>
+            	<documentation>When set to 'true', this attribute allows the generation from mixed template documents (gendoc V1 and gendoc V2). </documentation>
+            </annotation>
+    	</attribute>
+    	<attribute name="language" type="string" use="optional"
+    		default="acceleo">
+            <annotation>
+            	<documentation>This attribute is used to specify the script language. For the moment the only script handled by gendoc V2 is Acceleo.</documentation>
+            </annotation>
+    	</attribute>
+    </complexType>
+
+    <complexType name="output">
+        <annotation>
+        	<documentation>The tag &lt;output&gt; is used to declare the output file location and the output file name</documentation>
+        </annotation>
+        <attribute name="path" type="string" use="required">
+        	<annotation>
+        		<documentation>The path attribute value is the absolute path to the destination folder or file. If this tag is not defined the folder destination is the template file folder and the generated file name is the template file name append with “_generated”. If the path refers to a folder, the file will be generate in to this target folder with the template file name append with “_generated”. If the path refers to a file ending with the same extension than the template file, it will be the generated file path.</documentation>
+        	</annotation></attribute>
+    </complexType>
+
+    <complexType name="param">
+        <annotation>
+        	<documentation>The tag &lt;param&gt; is used to declare model value or element value. Those parameters tags will be used in the context declaration.</documentation>
+        </annotation>
+        <attribute name="key" type="string" use="required">
+        	<annotation>
+        		<documentation>This attribute is the name of the parameter</documentation>
+        	</annotation></attribute>
+    	<attribute name="value" type="string" use="required">
+    		<annotation>
+    			<documentation>This attribute is the model path or the element path.</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <complexType name="importedDiagrams">
+        <annotation>
+        	<documentation>The tag &lt;importedDiagrams&gt; is used to specify the diagrams images folder location. When this tag is present, diagrams images from models will not be exported. The diagrams images used during the generation are taken from this folder.</documentation>
+        </annotation>
+        <attribute name="path" type="string" use="required">
+        	<annotation>
+        		<documentation>This attribute  is the absolute path to the folder that contains the diagrams images.</documentation>
+        	</annotation></attribute>
+    </complexType>
+</schema>
