@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.papyrus.gendoc2.wizard.runner">
+      <GenDoc2Element
+            Instance="org.eclipse.papyrus.gendoc.sysml.template.SysMLGendoc2Runner">
+      </GenDoc2Element>
+   </extension>
+     
+</plugin>

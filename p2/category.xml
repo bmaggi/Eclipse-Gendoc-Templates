@@ -7,6 +7,19 @@
 		<category name="org.eclipse.papyrus.gendoc2.category"/>
 	</feature>
 	
+	<feature id="org.eclipse.papyrus.gendoc.robotml" url="features/org.eclipse.papyrus.gendoc.robotml_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
+	<feature id="org.eclipse.papyrus.gendoc.robotml.source" url="features/org.eclipse.papyrus.gendoc.robotml.source_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
+	
+	<feature id="org.eclipse.papyrus.gendoc.sysml" url="features/org.eclipse.papyrus.gendoc.sysml_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
+	<feature id="org.eclipse.papyrus.gendoc.sysml.source" url="features/org.eclipse.papyrus.gendoc.sysml.source_1.0.0.qualifier.jar" version="1.0.0.qualifier">
+		<category name="org.eclipse.papyrus.gendoc2.category"/>
+	</feature>
 	
 	<category-def label="Gendoc2 by Papyrus" name="org.eclipse.papyrus.gendoc2.category">
 		<description>Gendoc2 by Papyrus</description>

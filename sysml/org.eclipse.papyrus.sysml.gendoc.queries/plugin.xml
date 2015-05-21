@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.gendoc2.script.acceleo.services">
+      <service
+            emtl="bin/org/eclipse/papyrus/sysml/gendoc/queries/common/SysML_Queries.emtl"
+            importedByDefault="true"
+            name="SysML_Queries">
+      </service>
+   </extension>
+
+</plugin>
