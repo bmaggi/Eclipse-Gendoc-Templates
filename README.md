@@ -1,6 +1,10 @@
 # Gendoc2
 A forked version of the open source project [Gendoc][2] used by the [Papyrus][1] team.
 
+### Status ###
+
+[ ![Codeship Status for bmaggi/Gendoc2](https://codeship.com/projects/179901f0-0625-0133-39c8-660a355d9d19/status?branch=master)](https://codeship.com/projects/89638)
+
 ### Repository structure ###
 
 This repository is organized around logical software components:
@@ -19,9 +23,6 @@ To build locally, simply execute the command line:
 ```
 mvn clean install
 ```
-
-## Travis CI 
-[![Build Status](https://travis-ci.org/bmaggi/Gendoc2.svg?branch=master)](https://travis-ci.org/bmaggi/Gendoc2)
 
 [1]:http://www.eclipse.org/papyrus/
 [2]:http://www.eclipse.org/gendoc/
