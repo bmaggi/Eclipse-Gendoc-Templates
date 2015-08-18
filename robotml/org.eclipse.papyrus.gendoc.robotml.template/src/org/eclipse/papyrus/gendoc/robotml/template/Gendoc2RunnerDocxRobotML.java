@@ -17,9 +17,9 @@ package org.eclipse.papyrus.gendoc.robotml.template;
 
 import java.net.URL;
 
-import org.eclipse.papyrus.gendoc2.wizard.IGendoc2Template;
+import org.eclipse.gendoc.wizard.IGendocTemplate;
 
-public class Gendoc2RunnerDocxRobotML implements IGendoc2Template {
+public class Gendoc2RunnerDocxRobotML implements IGendocTemplate {
 	
 	private String description = "RobotML MS Word 2010 generation template";
 
@@ -45,6 +45,11 @@ public class Gendoc2RunnerDocxRobotML implements IGendoc2Template {
 
 	public String getName() {
 		return "RobotML";
+	}
+
+	public boolean isSavable() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.papyrus.gendoc2.script.acceleo.services">
+         point="org.eclipse.gendoc.script.acceleo.services">
       <service
             emtl="bin/org/eclipse/papyrus/sysml/gendoc/queries/common/SysML_Queries.emtl"
             importedByDefault="true"

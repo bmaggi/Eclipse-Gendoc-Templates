@@ -3,10 +3,10 @@
 <plugin>
 
    <extension
-         point="org.eclipse.papyrus.gendoc2.wizard.runner">
-      <GenDoc2Element
+         point="org.eclipse.gendoc.wizard.runner">
+      <GendocElement
             Instance="org.eclipse.papyrus.gendoc.robotml.template.RobotMLGendoc2Runner">
-      </GenDoc2Element>
+      </GendocElement>
    </extension>
      
 </plugin>

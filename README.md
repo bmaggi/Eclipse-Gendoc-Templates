@@ -1,5 +1,5 @@
-# Gendoc2
-A forked version of the open source project [Gendoc][2] used by the [Papyrus][1] team.
+# Gendoc2 2.0.0
+SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
 
 ### Status ###
 
@@ -9,10 +9,9 @@ A forked version of the open source project [Gendoc][2] used by the [Papyrus][1]
 
 This repository is organized around logical software components:
 
-* `core`: The core software components for Gendoc2.
 * `p2`: The Eclipse update site specification for all the above components.
-* `robotml`: The RobotML-related software component for Gendoc2. They depend on the core components.
-* `sysml`: The SysML-related software component for Gendoc2. They depend on the core components.
+* `robotml`: The RobotML-related software component for Gendoc. 
+* `sysml`: The SysML-related software component for Gendoc. 
 
 
 ### How to build ###

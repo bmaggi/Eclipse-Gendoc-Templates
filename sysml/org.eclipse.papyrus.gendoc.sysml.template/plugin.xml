@@ -3,10 +3,9 @@
 <plugin>
 
    <extension
-         point="org.eclipse.papyrus.gendoc2.wizard.runner">
-      <GenDoc2Element
+         point="org.eclipse.gendoc.wizard.runner">
+      <GendocElement
             Instance="org.eclipse.papyrus.gendoc.sysml.template.SysMLGendoc2Runner">
-      </GenDoc2Element>
+      </GendocElement>
    </extension>
-     
 </plugin>

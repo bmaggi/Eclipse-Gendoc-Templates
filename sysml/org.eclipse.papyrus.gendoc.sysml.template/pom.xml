@@ -4,11 +4,8 @@
 	<parent>
 		<artifactId>org.eclipse.papyrus.gendoc2.sysml.top</artifactId>
 		<groupId>org.eclipse.papyrus.gendoc2</groupId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.eclipse.papyrus.gendoc.sysml.template</artifactId>
-	<groupId>org.eclipse.papyrus.gendoc2</groupId>
-	<version>1.0.0-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 </project>

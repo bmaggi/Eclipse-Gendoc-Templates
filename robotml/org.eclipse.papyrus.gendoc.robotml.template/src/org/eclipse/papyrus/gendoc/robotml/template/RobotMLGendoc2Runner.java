@@ -16,21 +16,22 @@ package org.eclipse.papyrus.gendoc.robotml.template;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
-import org.eclipse.papyrus.gendoc2.bundle.acceleo.papyrus.utils.OneFileUMLSelectionConverter;
-import org.eclipse.papyrus.gendoc2.wizard.IGendoc2Runner;
-import org.eclipse.papyrus.gendoc2.wizard.IGendoc2Template;
-import org.eclipse.papyrus.gendoc2.wizard.ISelectionConverter;
+import org.eclipse.gendoc.wizard.DefaultSelectionConverter;
+import org.eclipse.gendoc.wizard.IGendocRunner;
+import org.eclipse.gendoc.wizard.IGendocTemplate;
+import org.eclipse.gendoc.wizard.ISelectionConverter;
 
 /**
  * The Class represent the loader for papyrus document generation.
  * 
  * @author 
  */
-public class RobotMLGendoc2Runner implements IGendoc2Runner 
+public class RobotMLGendoc2Runner implements IGendocRunner 
 {
-    List<IGendoc2Template> templates = new ArrayList<IGendoc2Template>();
+    List<IGendocTemplate> templates = new ArrayList<IGendocTemplate>();
 
     public RobotMLGendoc2Runner()
     {
@@ -48,13 +49,13 @@ public class RobotMLGendoc2Runner implements IGendoc2Runner
 
     public ISelectionConverter getSelectionConverter()
     {
-        return new OneFileUMLSelectionConverter();
+        return new DefaultSelectionConverter();
     }
     
     /**
      * @return all the template format associated to this Papyrus runner
      */
-    public List<IGendoc2Template> getGendoc2Templates()
+    public List<IGendocTemplate> getGendocTemplates()
     {
         return templates;
     }
@@ -63,5 +64,11 @@ public class RobotMLGendoc2Runner implements IGendoc2Runner
     {
         return "RobotML Gendoc2 Generation";
     }
+
+	public Map<String, String> getAdditionnalParameters() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

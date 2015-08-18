@@ -3,10 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.eclipse.papyrus.gendoc2</groupId>
 	<artifactId>org.eclipse.papyrus.gendoc2.top</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>core</module>
 		<module>robotml</module>
 		<module>sysml</module>
 		<module>p2</module>
@@ -26,9 +25,11 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/luna/extra</url>
 		</repository>
-
-		
-		
+		<repository>
+			<id>nightly-gendoc</id>
+			<layout>p2</layout>
+			<url>https://hudson.eclipse.org/gendoc/job/Gendoc/ws/releng/org.eclipse.gendoc.update-site/target/repository/</url>
+		</repository>
 	</repositories>
 	<build>
 		<plugins>

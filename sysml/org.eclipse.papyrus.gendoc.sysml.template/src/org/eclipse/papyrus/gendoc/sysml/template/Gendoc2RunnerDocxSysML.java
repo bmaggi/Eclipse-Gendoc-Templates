@@ -17,9 +17,9 @@ package org.eclipse.papyrus.gendoc.sysml.template;
 
 import java.net.URL;
 
-import org.eclipse.papyrus.gendoc2.wizard.IGendoc2Template;
+import org.eclipse.gendoc.wizard.IGendocTemplate;
 
-public class Gendoc2RunnerDocxSysML implements IGendoc2Template{
+public class Gendoc2RunnerDocxSysML implements IGendocTemplate{
 	
 	private String description = "SysML MS Word 2010 generation template";
 
@@ -45,5 +45,10 @@ public class Gendoc2RunnerDocxSysML implements IGendoc2Template{
 
 	public String getName() {
 		return "SysML";
+	}
+
+	public boolean isSavable() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
