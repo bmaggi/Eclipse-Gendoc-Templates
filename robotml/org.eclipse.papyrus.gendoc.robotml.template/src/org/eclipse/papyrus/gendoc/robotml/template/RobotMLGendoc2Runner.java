@@ -19,8 +19,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import org.eclipse.gendoc.wizard.DefaultSelectionConverter;
+import org.eclipse.gendoc.bundle.acceleo.papyrus.utils.OneFileUMLSelectionConverter;
 import org.eclipse.gendoc.wizard.IGendocRunner;
+import org.eclipse.gendoc.wizard.IGendocSelectionConverterRunner;
 import org.eclipse.gendoc.wizard.IGendocTemplate;
 import org.eclipse.gendoc.wizard.ISelectionConverter;
 
@@ -29,14 +30,13 @@ import org.eclipse.gendoc.wizard.ISelectionConverter;
  * 
  * @author 
  */
-public class RobotMLGendoc2Runner implements IGendocRunner 
+public class RobotMLGendoc2Runner implements IGendocSelectionConverterRunner 
 {
     List<IGendocTemplate> templates = new ArrayList<IGendocTemplate>();
 
     public RobotMLGendoc2Runner()
     {
     	templates.add(new Gendoc2RunnerDocxRobotML());
-    	//templates.add(new Gendoc2RunnerDocx());
     }
 
     /**
@@ -49,7 +49,7 @@ public class RobotMLGendoc2Runner implements IGendocRunner
 
     public ISelectionConverter getSelectionConverter()
     {
-        return new DefaultSelectionConverter();
+        return new OneFileUMLSelectionConverter();
     }
     
     /**
