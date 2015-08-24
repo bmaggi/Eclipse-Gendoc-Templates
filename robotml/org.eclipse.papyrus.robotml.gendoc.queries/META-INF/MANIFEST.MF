@@ -7,7 +7,7 @@ Bundle-Activator: org.eclipse.papyrus.robotml.gendoc.queries.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.uml2.uml,
- org.eclipse.papyrus.robotml;bundle-version="0.10.1",
+ org.eclipse.papyrus.robotml;bundle-version="1.0.2",
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.ocl,
