@@ -11,8 +11,8 @@
 		<module>p2</module>
 	</modules>
 	<properties>
-		<tycho-version>0.21.0</tycho-version>
-		<tychoExtrasVersion>0.21.0</tychoExtrasVersion>
+		<tycho-version>0.24.0</tycho-version>
+		<tychoExtrasVersion>0.24.0</tychoExtrasVersion>
 	</properties>
 	<repositories>
 		<repository>
@@ -26,9 +26,9 @@
 			<url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/luna/extra</url>
 		</repository>
 		<repository>
-			<id>nightly-gendoc</id>
+			<id>gendoc</id>
 			<layout>p2</layout>
-			<url>https://hudson.eclipse.org/gendoc/job/Gendoc/ws/releng/org.eclipse.gendoc.update-site/target/repository/</url>
+			<url>http://download.eclipse.org/gendoc/updates/releases/0.5.0/</url>
 		</repository>
 	</repositories>
 	<build>
