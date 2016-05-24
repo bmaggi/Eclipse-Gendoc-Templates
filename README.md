@@ -1,5 +1,7 @@
-# Gendoc2 2.0.0
+# Template for Eclipse
 SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
+
+(templates are coming from an old fork named Gendoc2 2.0.0)
 
 ### Status ###
 
