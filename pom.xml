@@ -11,8 +11,8 @@
 		<module>p2</module>
 	</modules>
 	<properties>
-		<tycho-version>0.24.0</tycho-version>
-		<tychoExtrasVersion>0.24.0</tychoExtrasVersion>
+		<tycho-version>0.25.0</tycho-version>
+		<tychoExtrasVersion>0.25.0</tychoExtrasVersion>
 	</properties>
 	<repositories>
 		<repository>
