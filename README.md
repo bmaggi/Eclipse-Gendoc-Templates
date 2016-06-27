@@ -1,7 +1,8 @@
 # Template for Eclipse
 SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
 
-(templates are coming from an old fork named Gendoc2 2.0.0)
+
+(:warning: templates are coming from an old fork named Gendoc2 2.0.0)
 
 ### Status ###
 
@@ -9,6 +10,7 @@ Codeship [ ![Codeship Status for bmaggi/Gendoc2](https://codeship.com/projects/1
 
 License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
 
+:warning: Built against Eclipse Luna
 
 ### Repository structure ###
 
@@ -27,6 +29,12 @@ To build locally, simply execute the command line:
 ```
 mvn clean install
 ```
+
+### How to use ###
+
+Once the projects are build you need:
+ - add the update site in "Available Software Site"  (it has been created here p2\target\repository\plugins)
+ - install the plugins
 
 [1]:http://www.eclipse.org/papyrus/
 [2]:http://www.eclipse.org/gendoc/
