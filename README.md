@@ -33,7 +33,7 @@ mvn clean install
 ### How to use ###
 
 Once the projects are build you need:
- - add the update site in "Available Software Site"  (it has been created here p2\target\repository\plugins)
+ - add the update site in "Available Software Site"  (it has been created here p2\target\repository\plugins\content.jar)
  - install the plugins
 
 [1]:http://www.eclipse.org/papyrus/
