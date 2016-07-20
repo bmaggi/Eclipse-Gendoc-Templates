@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.gendoc.feature.qualifier.jar" id="org.eclipse.gendoc.feature" version="0.5.1.qualifier">
-      <category name="org.eclipse.gendoc.category"/>
-   </feature>
    <feature url="features/org.eclipse.papyrus.gendoc.robotml_2.0.0.qualifier.jar" id="org.eclipse.papyrus.gendoc.robotml" version="2.0.0.qualifier">
       <category name="org.eclipse.papyrus.gendoc2.category"/>
    </feature>
