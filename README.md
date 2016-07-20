@@ -51,7 +51,11 @@ mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=X.Y.Z-SNAPS
 
 ### How to use ###
 
-Once the projects are build you need:
+Install the latest stable version from 
+http://bmaggi.github.io/Eclipse-Gendoc-Templates/repository/
+
+
+Or once the projects are build you need:
  - add the update site in "Available Software Site"  (it has been created here p2\target\repository\plugins\content.jar)
  - install the plugins
 
