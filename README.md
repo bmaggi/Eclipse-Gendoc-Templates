@@ -30,6 +30,25 @@ To build locally, simply execute the command line:
 mvn clean install
 ```
 
+### How to release ###
+
+A reminder for a standard release
+
+* Set the fix version for the release
+```
+mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=X.Y.Z
+```
+
+* Tag the code with X.Y.Z
+```
+git tag -l "X.Y.Z"
+```
+
+* Set the new snapshot version
+```
+mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=X.Y.Z-SNAPSHOT
+```
+
 ### How to use ###
 
 Once the projects are build you need:

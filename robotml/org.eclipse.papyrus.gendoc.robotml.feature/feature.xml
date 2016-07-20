@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.papyrus.gendoc.robotml"
       label="Gendoc RobotML (optional)"
-      version="2.0.0.qualifier">
+      version="2.0.0">
 
    <description url="http://www.example.com/description">
       Gendoc for RobotML (optional)

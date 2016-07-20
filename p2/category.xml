@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.papyrus.gendoc.robotml_2.0.0.qualifier.jar" id="org.eclipse.papyrus.gendoc.robotml" version="2.0.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.gendoc.robotml_2.0.0.jar" id="org.eclipse.papyrus.gendoc.robotml" version="2.0.0">
       <category name="org.eclipse.papyrus.gendoc2.category"/>
    </feature>
-   <feature url="features/org.eclipse.papyrus.gendoc.robotml.source_2.0.0.qualifier.jar" id="org.eclipse.papyrus.gendoc.robotml.source" version="2.0.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.gendoc.robotml.source_2.0.0.jar" id="org.eclipse.papyrus.gendoc.robotml.source" version="2.0.0">
       <category name="org.eclipse.papyrus.gendoc2.category"/>
    </feature>
-   <feature url="features/org.eclipse.papyrus.gendoc.sysml_2.0.0.qualifier.jar" id="org.eclipse.papyrus.gendoc.sysml" version="2.0.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.gendoc.sysml_2.0.0.jar" id="org.eclipse.papyrus.gendoc.sysml" version="2.0.0">
       <category name="org.eclipse.papyrus.gendoc2.category"/>
    </feature>
-   <feature url="features/org.eclipse.papyrus.gendoc.sysml.source_2.0.0.qualifier.jar" id="org.eclipse.papyrus.gendoc.sysml.source" version="2.0.0.qualifier">
+   <feature url="features/org.eclipse.papyrus.gendoc.sysml.source_2.0.0.jar" id="org.eclipse.papyrus.gendoc.sysml.source" version="2.0.0">
       <category name="org.eclipse.papyrus.gendoc2.category"/>
    </feature>
-   <category-def name="org.eclipse.papyrus.gendoc2.category" label="Gendoc2 by Papyrus">
+   <category-def name="org.eclipse.papyrus.gendoc2.category" label="Eclipse-Gendoc-Templates">
       <description>
          Gendoc2 by Papyrus
       </description>
