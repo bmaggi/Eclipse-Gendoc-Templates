@@ -1,16 +1,16 @@
-# Template for Eclipse
+# Gendoc templates for Papyrus Eclipse
 SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
 
 
-(:warning: templates are coming from an old fork named Gendoc2 2.0.0)
+:warning: templates are coming from an old fork named Gendoc2 2.0.0
+
+:warning: Built against Eclipse Luna
 
 ### Status ###
 
-Codeship [ ![Codeship Status for bmaggi/Gendoc2](https://codeship.com/projects/179901f0-0625-0133-39c8-660a355d9d19/status?branch=master)](https://codeship.com/projects/89638)
+[ ![Codeship Status for bmaggi/Gendoc2](https://codeship.com/projects/179901f0-0625-0133-39c8-660a355d9d19/status?branch=master)](https://codeship.com/projects/89638)
+[![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
 
-License [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
-
-:warning: Built against Eclipse Luna
 
 ### Repository structure ###
 
