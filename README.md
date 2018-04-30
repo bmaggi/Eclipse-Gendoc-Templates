@@ -8,7 +8,7 @@ SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
 
 ### Status ###
 
-[ ![Codeship Status for bmaggi/Gendoc2](https://codeship.com/projects/179901f0-0625-0133-39c8-660a355d9d19/status?branch=master)](https://codeship.com/projects/89638)
+[ ![Codeship Status for bmaggi/Eclipse-Gendoc-Templates](https://codeship.com/projects/179901f0-0625-0133-39c8-660a355d9d19/status?branch=master)](https://codeship.com/projects/89638)
 [![License](https://img.shields.io/badge/license-EPL-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
 
 
