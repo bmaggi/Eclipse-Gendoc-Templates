@@ -1,6 +1,7 @@
 # Gendoc templates for Papyrus Eclipse
 SysML and RobotML [Gendoc][2] templates used by the [Papyrus][1] team.
 
+This project is archived, check [SysML14-Gendoc-Example](https://github.com/bmaggi/SysML14-Gendoc-Example) for template on Eclipse Oxygen
 
 :warning: templates are coming from an old fork named Gendoc2 2.0.0
 
